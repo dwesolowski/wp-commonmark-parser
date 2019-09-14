@@ -1,0 +1,19 @@
+ code[class*="language-bash-"]:before {
+     color: #999;
+     font-size:14px;
+     padding-right: 0.6em;
+     pointer-events: none;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+}
+ .language-bash-root:before {
+     content: "#";
+}
+ .language-bash-user:before {
+     content: "$";
+}
+ .language-bash-mysql:before {
+     content: "mysql>";
+}
