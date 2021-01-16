@@ -3,7 +3,7 @@
  * Plugin Name: WP CommonMark Parser
  * Plugin URI:
  * Description: A simple plugin to add Markdown support to WordPress.
- * Version: 1.0
+ * Version: 2.0
  * Author: Daren Wesolowski
  * Author URI: https://github.com/dwesolowski/wp-commonmark-parser
  * License: GPLv3
@@ -33,9 +33,9 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
-use League\CommonMark\Extras\CommonMarkExtrasExtension;
-use Webuni\CommonMark\AttributesExtension\AttributesExtension;
-use RZ\CommonMark\Ext\Footnote\FootnoteExtension;
+use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
+use League\CommonMark\Extension\Attributes\AttributesExtension;
+use League\CommonMark\Extension\Footnote\FootnoteExtension;
 
 $config = [
     'renderer' => [

@@ -10,8 +10,9 @@ A simple plugin to add Markdown to WordPress which supports the full CommonMark 
 
 ## Extensions Included
 
- - [league/commonmark-extras](https://github.com/thephpleague/commonmark-extras) - collection of useful GFM extensions and utilities.
- - [CommonMark Attributes Extension](https://github.com/webuni/commonmark-attributes-extension) - Adds a syntax to define attributes on the various HTML elements.
+ - [league/commonmark GithubFlavoredMarkdown Extension](https://commonmark.thephpleague.com/1.5/extensions/github-flavored-markdown/) - GitHub markdown.
+ - [league/commonmark Footnotes Extension](https://commonmark.thephpleague.com/1.5/extensions/footnotes/) - ability to create footnotes.
+ - [league/commonmark Attributes Extension](https://commonmark.thephpleague.com/1.5/extensions/attributes/) - Allows HTML attributes to be added.
 
 ## License
 
