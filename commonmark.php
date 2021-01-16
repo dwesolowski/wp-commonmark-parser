@@ -35,6 +35,7 @@ use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
 use League\CommonMark\Extras\CommonMarkExtrasExtension;
 use Webuni\CommonMark\AttributesExtension\AttributesExtension;
+use RZ\CommonMark\Ext\Footnote\FootnoteExtension;
 
 $config = [
     'renderer' => [
@@ -46,6 +47,7 @@ $config = [
         'enable_strong' => true,        // Disable <strong> parsing by setting to false; enable with true (default: true)
         'use_asterisk' => true,         // Disable parsing of * for emphasis by setting to false; enable with true
         'use_underscore' => false,      // Disable parsing of _ for emphasis by setting to false; enable with true (default: true)
+				'unordered_list_markers' => ['-', '*', '+'],   // Array of characters that can be used to indicated a bulleted list (default: ["-", "*", "+"])
         'html_input' => 'allow',        // How to handle HTML input. Set this option to one of the following strings: strip, allow, escape
         'allow_unsafe_links' => false,  // Remove risky link and image URLs by setting this to false (default: true)
         'max_nesting_level' => INF      // The maximum nesting level for blocks (default: infinite 'INF' or use a possitive 'int' value)
@@ -166,8 +168,9 @@ class CommonMarkParser {
 				$environment = Environment::createCommonMarkEnvironment();
 
 				/* Register Extensions */
-				$environment->addExtension( new CommonMarkExtrasExtension() );
+				$environment->addExtension( new GithubFlavoredMarkdownExtension() );
 				$environment->addExtension( new AttributesExtension() );
+				$environment->addExtension(new FootnoteExtension());
 
 				/* Config */
 				global $config;

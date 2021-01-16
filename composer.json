@@ -1,7 +1,5 @@
 {
     "require": {
-        "league/commonmark": "^1.0",
-        "league/commonmark-extras": "^1.1",
-        "webuni/commonmark-attributes-extension": "^1.0"
+        "league/commonmark": "^1.5"
     }
 }
